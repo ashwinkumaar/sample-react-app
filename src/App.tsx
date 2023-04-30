@@ -1,8 +1,16 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import { logger } from './common/logger/logger';
 
 function App() {
+
+  useEffect (() => {
+    logger.log('Hello!');
+    logger.warn('Careful there!');
+    logger.error('Oh, no!');
+  }, [])
+  
   return (
     <div className="App">
       <header className="App-header">
